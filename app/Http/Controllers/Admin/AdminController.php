@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller {
 	function index() {
 		$books = Tour::all();
-		return view('admin.index', ["data" => $books]);
+		return view('index', ["data" => $books]);
 	}
 
 	function form_add() {
@@ -46,7 +46,7 @@ class AdminController extends Controller {
 		$book->number = $number;
 		$book->price = $price;
 		$book->save();
-		return redirect()->route('admin.index', ["add" => "Thêm Thành Công"]);
+		return redirect()->route('index', ["add" => "Thêm Thành Công"]);
 
 	}
 }

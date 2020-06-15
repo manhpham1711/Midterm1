@@ -17,6 +17,6 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/index', 'Admin\AdminController@index')->name('admin.index');
+Route::get('/index', 'Admin\AdminController@index')->name('index');
 Route::get('/index/add', 'Admin\AdminController@form_add')->name('admin.add');
 Route::post('/admin/add', 'Admin\AdminController@add');
